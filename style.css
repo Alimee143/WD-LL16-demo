@@ -316,6 +316,49 @@ h1 {
   margin-bottom: 8px;
 }
 
+/* Add spacing between sections in assistant messages */
+/* Chat bubble styles for chatbot messages */
+.chatbot-message {
+  display: inline-block;
+  clear: both;
+  padding: 10px 14px;
+  border-radius: 16px;
+  margin-bottom: 8px;
+  max-width: 85%;
+  word-break: break-word;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  line-height: 1.5;
+}
+
+.chatbot-message--user {
+  background: #3bb0ff;
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.chatbot-message--assistant {
+  background: #fff;
+  color: #23232d;
+  align-self: flex-start;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+/* Add spacing between sections in assistant messages */
+.chatbot-message--assistant br + br {
+  display: block;
+  margin-top: 8px;
+  content: " ";
+}
+
+.chatbot-panel .chatbot-messages {
+  /* ...existing code... */
+  display: flex;
+  flex-direction: column;
+}
+
 /* Make sure the Material Icons font is used and sized correctly */
 .material-icons-outlined.chatbot-icon {
   font-family: 'Material Icons Outlined', 'Material Icons', Arial, sans-serif !important;
